@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int n;
+    int x,y,res=0;
+    scanf("%d",&n);
+    scanf("%d%d",&x,&y);
+    int c=0;
+    while(n>0)
+    {
+        int temp=n%10==x?y:(n%10);
+        res=temp*(pow(10,c))+res;
+        n=n/10;
+        c++;
+    }
+    printf("%d",res);
+    return 0;
+}
+output:16918
+       1 7
+       76978
+output:12345
+       3 9
+       12945
